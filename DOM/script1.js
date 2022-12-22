@@ -122,3 +122,82 @@
 // console.log(el.previousElementSibling)
 
 // -----------------------------------------
+
+// Criando e adicionando elementos
+
+// createElement
+
+// const div = document.createElement('div');
+// div.innerText = "Olá Devs!"
+
+// append prepend
+
+// const body = document.querySelector('body')
+// body.append(div)
+// body.prepend(div)
+
+// -----------------------------------------
+
+// Adicionando elementos
+
+// const div = document.createElement('div');
+// div.innerText = "Olá Devs!"
+
+// insertBefore
+
+// const body = document.querySelector('body')
+// const script = body.querySelector('script')
+// body.insertBefore(div, script)
+
+// "insertAfter"
+
+// const body = document.querySelector('body')
+// const header = body.querySelector('header')
+// body.insertBefore(div, header.nextElementSibling)
+
+// -----------------------------------------
+
+// Eventos
+
+// function print() {
+//     console.log('print')
+// }
+
+// -----------------------------------------
+
+// Eventos de Teclado
+
+// const input = document.querySelector('input');
+
+// input.onkeyup = function() {
+//     console.log('rodei')
+// }
+
+// -----------------------------------------
+
+// Eventos via JS
+
+// const h1 = document.querySelector('h1');
+// h1.addEventListener('click', print)
+// function print() {
+//     console.log('print')
+// }
+
+// Eventos via JS segunda forma (não recomendado)
+
+// const h1 = document.querySelector('h1');
+// h1.onclick = print
+// function print() {
+//     console.log('print')
+// }
+
+// -----------------------------------------
+
+// Eventos 
+// Argumento event 
+
+// const input = document.querySelector('input');
+
+// input.onkeyup = function(event) {
+//     console.log(event)
+// }
