@@ -81,6 +81,8 @@
 
 // ------------------------------------------
 
+// Buscando Filhos
+
 // Navegando pelos elementos
 // parentNode parentElement
 
@@ -105,4 +107,18 @@
 
 // -----------------------------------------
 
-// 
+// Buscando Irmãos
+
+// Navegando pelos elementos
+
+// const el = document.querySelector('body script')
+
+// nextSibling nextElementSibling
+
+// console.log(el.nextElementSibling)
+
+// previousSibling previousElementSibling
+
+// console.log(el.previousElementSibling)
+
+// -----------------------------------------
