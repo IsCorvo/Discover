@@ -64,3 +64,17 @@ Uma das estruturas mais básicas, simples de criar e utilizar.
 
     ['a', 10, 'b', true] // total de 4 elementos
     / 0 ,  1,  2 ,   3 /
+
+### Características
+
+- Acesso pelo index
+- Respeita a ordem de inserção dos elementos
+- Aceita valores duplicados
+- Dependendo do tamanho do Arrays, para encontrar e/ou deletar um elemento, seá necessário um uso maior de performance.
+
+Arrays no JavaScript
+
+- São dinâmicos
+- Você poderá ter dados de diferentes tipos misturados dentro de um Array. Strings, numbers, booleans, objetos, funções e até outros arrays.
+- Existem muitos métodos já implementados
+  - *push()*, *pop()*, *find()*, *filter()*, entre outros
