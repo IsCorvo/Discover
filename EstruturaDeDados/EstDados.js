@@ -1,3 +1,5 @@
+// Arrays
+
 const pilotos = [
     'Senna', 'Prost', 'Schumacher', 'Hamilton'
 ]
@@ -25,3 +27,15 @@ console.log(senna)
 // Deletar um elemento
 pilotos.splice(1, 1)
 console.log(pilotos)
+
+// ---
+
+// Matrix
+
+const students = [
+    ['Joseph', 23, 'MG'],
+    ['Briana', 22, 'SP'],
+    ['Priscila', 23, 'PR']
+]
+
+console.log(students[0][1])

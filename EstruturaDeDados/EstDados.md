@@ -78,3 +78,35 @@ Arrays no JavaScript
 - Você poderá ter dados de diferentes tipos misturados dentro de um Array. Strings, numbers, booleans, objetos, funções e até outros arrays.
 - Existem muitos métodos já implementados
   - *push()*, *pop()*, *find()*, *filter()*, entre outros
+
+---
+
+## Matrix
+
+Matriz ou Vetor multidimencional.
+
+- Significa que é um Array, dentro de outro array. Podemos ter muitos níveis.
+
+---
+
+## Stack
+
+Tradução de Stack é pilha. Como uma pilha de livros.
+
+- Linear, um após o outro
+- O último a entrar na pilha é o primeiro a sair
+
+### Conceitos
+
+- LIFO: Last In First Out
+  - O último elemento a entrar na pilha, aquele elemento do topo da pilha, é o primeiro a sair.
+
+### Stack no Código
+
+Métodos fundamentais
+
+     - push(): Adiciona um elemento à pilha
+     - pop(): Remove o elemento do topo da pilha
+     - peek(): Obter o elemento do topo da pilha
+
+Outros métodos poderão ser implementados como *"size()"* para mostrar o tamanho da pilha.
