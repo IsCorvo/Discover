@@ -56,3 +56,20 @@ Porém, alguns objetos na programação não são fáceis de identificar, pois s
 - Autorização
 
       Nem Todo Objeto do mundo real fará parte do seu sistema.
+
+---
+
+## Classes
+
+As classes na orientação a objetos funcionam como um molde para os objetos. Os objetos são criados a partir de uma classe e muitos deles podem ser feitos da mesma classe.
+
+- Exemplo: Máquina de biscoito
+  - Instâncias
+
+### Classes em JavaScript
+
+- Syntactical sugar
+- Prototype
+
+---
+
