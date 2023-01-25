@@ -88,14 +88,14 @@ Ex: Dirigir carro vs conhecer o motor do carro
 
 ### Programação Estruturada x Orientada a Objetos
 
-### Programação Estruturada
+#### Programação Estruturada
 
 - Processa a entrada e manipulação dos dados, até a saída
 - Uso de sequências, estruturas de repetiçôes e condições
 - Uso de uma rotina maior, ou sub-rotinas
 - Não existe restrições às variáveis
 
-### Programação Orientada a Objetos
+#### Programação Orientada a Objetos
 
 - Surge para trazer um cuidado ao uso estruturado
   - Não elimina por completo o uso estruturado
