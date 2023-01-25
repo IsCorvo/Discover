@@ -73,3 +73,32 @@ As classes na orientação a objetos funcionam como um molde para os objetos. Os
 
 ---
 
+## Encapsulamento
+
+Ex: Dirigir carro vs conhecer o motor do carro
+
+- Colocar numa cápsula
+- Agrupamento de funções e variáveis
+- Esconder detalhes de implementação
+- Camada de segurança para os atributos e métodos
+
+---
+
+## Confusão vs Solução
+
+### Programação Estruturada x Orientada a Objetos
+
+### Programação Estruturada
+
+- Processa a entrada e manipulação dos dados, até a saída
+- Uso de sequências, estruturas de repetiçôes e condições
+- Uso de uma rotina maior, ou sub-rotinas
+- Não existe restrições às variáveis
+
+### Programação Orientada a Objetos
+
+- Surge para trazer um cuidado ao uso estruturado
+  - Não elimina por completo o uso estruturado
+- Conceitos como Objetos e Classes
+- Cuidados com variáveis e rotinas (Encapsulamento)
+- Melhor reuso de código (Herança)
