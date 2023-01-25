@@ -110,3 +110,30 @@ Métodos fundamentais
      - peek(): Obter o elemento do topo da pilha
 
 Outros métodos poderão ser implementados como *"size()"* para mostrar o tamanho da pilha.
+
+---
+
+## Queue
+
+Tradução de Queue é fila.
+
+Como uma fila em uma loja ou restaurante.
+
+- Linear
+- O primeiro a entrar na fila é o primeiro a sair
+
+### Conceito
+
+- FIFO: First In First Out
+  - O primeiro elemento a entrar na fila, é o primeiro a sair dela
+- Front (frente) é a referência do primeiro elemento a entrar na fila
+- Back (fundo) é a referência do último elemento a entrar na fila
+
+## Queue no Código
+
+### Métodos fundamentais
+
+- enqueue(): Adciona um elemento ao final da fila
+- dequeue(): Remove o primeiro elemento a entrar na fila
+
+Outros métodos poderão ser implementados como *"size()"* para mostrar o tamanho da fila ou front() para pegar o primeiro elemento da fila, dentre tantos outros.
