@@ -115,3 +115,13 @@ Ex: Dirigir carro vs conhecer o motor do carro
 
 - Um objeto pode estender de outro objeto que pode estender de outro objeto
 - Fácil reutilização de código
+
+---
+
+## Polimorfismo
+
+Quando um objeto estende de outro (herança) talvez haja a necessidade de reescrever uma ou mais características (atributos e métodos) nesse novo objeto.
+
+Recriaremos então um método (ou mais) da classe herdada.
+
+Polimorfismo significa *muitas formas*
