@@ -126,3 +126,37 @@ O que preciso para acompanhar esse curso?
 - Não guarda estado
 - A função só conhece dados entregues a ela
 - A resposta não poderá variar
+
+---
+
+## As Funções
+
+Vamos conhecer algumas características das funções na programação funcional.
+
+[] Funções Independentes
+[] Funções Puras
+[] First-class Functions
+[] Higher-order Functions
+[] Composição de Funções
+
+### Funções Independetes
+
+- Deverá ter ao menos 1 argumento
+- deverá retornar algo
+- Nada que acontecer lá dentro afeta o mundo externo
+  - Dados imutáveis
+  - Não guardar estado
+- Não faremos uso de loops (*for, while*), mas se houver necessidade de tal, usaremos recursão (a função chama ela mesma)
+
+    '''js
+    const random = (number, Math) =>
+      Math.floor(Math.random() * number);
+    // Recursive
+    // Find the factorial of a number
+    const factorial = x => {
+      // if number is 0
+      if (x === 0) {
+        return 1;
+      }
+      return x * factorial(x - 1)
+    }
