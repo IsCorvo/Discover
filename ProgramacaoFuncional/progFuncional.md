@@ -161,6 +161,6 @@ Vamos conhecer algumas características das funções na programação funcional
         return 1;
       }
 
-      return x * factorial(x - 1)
+      return x * factorial(x - 1);
     }
     ```
