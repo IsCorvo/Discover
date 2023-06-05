@@ -247,3 +247,23 @@ Vamos conhecer algumas características das funções na programação funcional
 
     wait200(() => console.log ('waiting 200ms'))
     wait1000(() => console.log ('waiting 1s'))
+    ```
+
+### Composição de funções
+
+- Um encadeamento de funções
+- Uma função que retorna um dado e vai para outra função  que retorna um dado e vai pra outra função, que retorna...
+
+    ```js
+    const people = ['Rafa', 'Diego', 'Dani', 'Rod']
+    const uperCasePeopleThatStartsWithD = people
+    .filter(person => person.startsWith('D'))
+    .map(dperson => sperson.toUppercase())
+    ```
+
+## Conclusão
+
+- Paradigma de Programação
+- Linguagens
+- Conceitos fundamentais
+  - Statesless, Imutabilidade, Função pura, Higher-Order
