@@ -207,3 +207,43 @@ Vamos conhecer algumas características das funções na programação funcional
       {...person, name}
     }
     ```
+
+### First-class function
+
+- Podem estar em qualquer lugar, inclusive, como parâmertro de outras funções
+- A função poderá ser entendida como uma variável
+
+    ```js
+    const sayMyName = () => console.log('Mayk')
+    const runFunction = fn => fn()
+
+    runFunction(sayMyName)
+    runFunction(() => console.log('discover'))
+
+    console.log(runFunction(Math.random))
+    ```
+
+### Higher-Order Function
+
+- Funções que recebem funções como argumentos
+- Funções que poderão retornar outras funções
+
+    ```js
+    // Exemplo com .map() JS
+    const numbers = [2, 4, 8, 16]
+
+    const square = n => n * n
+
+    const squareNumber = numbers.map(square)
+
+    // Exemplo de um retorno de função
+    // (currying ou aplicação parcial de função)
+    const pause = wait => fn => setTimeout(fn, wait)
+
+    pause(600) (() => console.log ('waiting 600ms'))
+
+    const wait200 = pause(200)
+    const wait1000 = pause(1000)
+
+    wait200(() => console.log ('waiting 200ms'))
+    wait1000(() => console.log ('waiting 1s'))
