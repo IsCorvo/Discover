@@ -1,0 +1,196 @@
+# Guia Estelar de GIT
+
+## O que é o git
+
+ É um sistema de controle de versão distribuído, é open-source, então além de gratuito seu código é aberto, e permite que você volte a qualquer ponto na história do projeto, já que cada alteração no código cria um commit, e cada commit é um ponto na história.
+
+ Também pode controlar o fluxo de novas funcionalidades, através das ramificações (branch), que funcionam como universos paralelos, onde além do projeto principal, você pode criar uma linha alternativa, adicionar pontos na mesma e depois uni-la novamente à linha principal, sem falar na possibilidade de poder trabalhar com vários devs ao mesmo tempo, analisando e resolvendo conflitos, porém nesse curso não falaremos sobre essas ramificações, teremos mais foco em nossos próprios projetos, as ramificações ficarão para outro curso.
+
+---
+
+## Tipos de controles de versão
+
+### Sistemas locais
+
+ Copiar os arquivos para outro diretório
+
+ Muito comum e muito simples
+
+ Incrivelmente propensa a erros
+
+ Fácil de sobreescrever arquivos, caso haja uma cópia errada
+
+Para superar os possíveis erros, existe o RCS - Revision Control System
+
+Era muito popular antigamente, para o controle de versão.
+
+#### Algumas das características são
+
+- Mantém o conjunto de alterações, ou seja, as diferenças entre os arquivos
+
+- Possui formato especial no disco;
+
+- Pode re-criar como qualquer arquivo se parecia em qualquer ponto do tempo, adicionando-se todas as alterações ao arquivo.
+
+### Sistemas centralizados
+
+- Exemplos, CVS, Subversion e Perforce
+
+- Um único servidor que contém todos os arquivos
+
+- Vários clientes usam arquivos a partir desse servidor central
+
+ Por muitos anos, tem sido o padrão para o controle de versão. Algumas de suas vantagens incluem o controle sobre a atividade dos colaboradores no projeto, os administradores têm controle refinado sobre quem pode fazer o que, e é muito mais fácil administrar um CVCS do que lidar com bancos de dados locais de cada cliente
+
+ Porém, tem algumas desvantagens, já que se esse servidor der problema durante uma hora, nessa hora ninguém será capaz de colaborar ou salvar as alterações de versão para o que quer que estejam trabalhando, também corremos o mesmo risco de perder tudo se um disco falhar, assim como no sistema local, já que toda vez que trabalhamos com todo o histórico em um só local, corremos o risco de perder tudo.
+
+### Sistemas distribuídos
+
+ Há também, o melhor dos dois mundos, os chamados sistemas distribuídos, alguns exemplos incluem Git, Mercurial, Bazaar e Daarcs
+
+ Ele vai duplicar (clonar) localmente o repositório completo, e se qualquer servidor morrer enquanto algum sistema estiver colaborando por meio dele, qualquer um dos repositórios do cliente poderá ser copiado de volta para o servidor, e cada clone é um backup completo de todos os dados, isso sem falar que os clientes usam o estado mais recente dos arquivos.
+
+---
+
+## Instalando git no Mac
+
+Caso não tenha o Homebrew, acesse <https://brew.sh> e siga as instruções.
+
+ Copie e cole no seu terminal o seguinte comando:
+
+    brew install git
+
+ Para checar a instalação, digite no seu terminal:
+
+    git --version
+
+ Se aparecer a versão do git, ele foi instalado com êxito.
+
+## Instalando git no Windows
+
+ Ao entrar no site <https://git-scm.com>, vá até download, e automaticamente começará a baixar o arquivo, e assim que terminar, execute-o.
+
+ Após executado, apenas pressione next até chegar na janela de editor padrão para o git. (Recomendamos o vim, mas caso não tenha muito conhecimento do vim, selecione o Visual Studio Code porém, se não o tiver instalado em sua máquina, ele não lhe permitirá continuar a instalação)
+
+ Novamente, apenas pressione next até a instalação realmente começar, e apenas espere até ser concluída, pode desmarcar a última opção e o git foi instalado com êxito.
+
+## Instalando git no Linux
+
+ Caso seu Linux não tenha o git, o processo de instalação é muito simples, apenas use
+
+ acesse o site <https://git-scm.com>, vá até o botão downloads for Linux, e apenas rode o comando que estiver embaixo do seu OS.
+
+## Configuração inicial
+
+ Nesse vídeo falaremos sobre a configuração inicial do git, que será feita apenas uma vez por computador e o efeito se manterá mesmo após atualizações, e você também vai poder alterá-las em qualquer momento rodando esses comando novamente.
+
+ Primeiramente, abra o seu terminal e digite:
+
+    git config --global user.name "Seu nome completo entre aspas"
+    
+    git config --global user.email seuemailaqui@dominio.com
+
+ Isso é importante porque em cada commit essa informação será utilizada, e é carimbada de forma imutável nos commits que você começa a criar.
+
+ Caso você queira substituir essa informação para um projeto específico, apenas rode o comando sem a opção --global dentro daquele projeto.
+
+ Caso queira trocar o editor padrão, que é o vim, pelo VS Code, rode o comando abaixo:
+
+    git config --global core.editor "code -w"
+
+ Por fim, caso queira verificar as suas configurações, apenas rode o comando abaixo:
+
+     git config --list
+
+### Git config
+
+- Permite ver e atribuir variáveis de configuração como nome e email.
+- Estas variáveis podem ser armazenadas em três lugares diferentes:
+
+    1. **/etc/gitconfig**: válido para todos os usuários no sistema e todos os seus repositórios  Se você passar a opção **--sistem** para **git config**, ele lê e escreve neste arquivo.
+
+    2. **~/gitconfig** ou **~/.config/git/config**: Somente para o seu usuário. Você pode fazer o Git ler e escrever neste arquivo passando a opção **--global**.
+
+    3. **config** no diretório Git (ou seja, **.git/config**) de qualquer repositório que você esteja usando: específico para este repositório.
+
+Cada nível sobrescreve os valores no nível anterior, ou seja, valores em **.git/config** prevalecem sobre **/etc/gitconfig**.
+
+## Git help
+
+ Para termos ajuda com o git, podemos usar o comando git help, onde você vai obeter informações sobre praticamente tudo no git, basta colocar git help + a área (exibida com o comando git help) na qual sua dúvida se encaixa e procurar sua resposta.
+
+ Para sair do menu de ajuda, use o comando **:q**
+
+---
+
+## Iniciando um repositório
+
+Nesta aula iremos iniciar um repositório, primeiramente iremos criar um novo diretório, em seguida navegaremos até nosso diretório recém criado através do terminal.
+
+Após selecionarmos essa pasta, iremos rodar o comando git init, e assim que for executado, o nosso repositório será criado.
+
+Você pode notar que aparentemente nada foi adicionado no diretório, mas caso rode o comando ls -a, verá que aparece uma pasta .git, que é justamente o que queríamos.
+
+## O git guarda o histórico do projeto
+
+ Nesta aula, veremos onde o git guarda o histórico do nosso projeto, todos os detalhes e arquivos, tudo que estamos fazendo dentro do projeto.
+
+ Apenas rode o comando a seguir:
+
+    ls -al .git
+
+ Verá que há alguns arquivos nessa pasta, e são exatamente esses arquivos que nos trazem as informações do Git.
+
+ Atenção: Nunca delete a pasta git caso não esteja na nuvem, ela é seu repositório, no caso de você deletá-la, perderá todo o histórico do seu projeto.
+
+## O primeiro commit
+
+ Nesta aula iremos criar nosso primeiro commit, nosso primeiro ponto na história.
+
+ Primeiro iremos preparar nosso arquivo para isso, através do comando add, usado da seguinte forma:
+
+    git add .
+
+ O **" . "** nesse caso serve para selecionarmos todos os arquivos dentro do diretório.
+
+ Assim que tivermos executado esse comando, podemos criar nosso commit, da seguinte forma:
+
+    git commit -m "mensagem do commit, é obrigatória, então não se esqueça!"
+
+ E assim criamos nosso primeiro ponto na história!
+
+## Git log
+
+ Assim que rodar o comando no seu projeto, verá que temos uma hash, do tipo SHA-1, e também teremos entre parênteses o nosso branch, nesse caso o master, e no commit (sua hash), teremos o autor do commit, a data do mesmo e a mensagem do commit.
+
+ Caso queiramos um resultado menor desse comando, podemos usar a opção --oneline, da seguinte forma:
+
+    git log --oneline
+
+ Ele vai encurtar a hash, retirar o autor, a data e exibir a mensagem do commit ao lado.
+
+ Suponhamos que você tem 50 commits, e precisa apenas dos últimos 5, nesse caso, rode o comando a seguir:
+
+    git log -n 5
+
+ Ou seja, apenas coloque o argumento -n e a quantidade dos últimos commits que deseja.
+
+ Caso queira ver os commits após uma data específica, utilize o argumento --since, da seguinte forma:
+
+    git log --since=aaaa-mm-dd
+
+ Já caso queira os commits antes de uma data específica, use o argumento --until, da seguinte forma:
+
+    git log --until=aaaa-mm-dd
+
+ Você também pode aplicar um filtro para o autor do commit, para procurar os commits de uma pessoa em específico, usando o argumento --author, utilizado da seguinte forma:
+
+    git log --author=nomedoautor(nao precisa ser completo)
+
+ Também temos a forma mais poderosa de se utilizar o git log que é com o argumento grep, usado da seguinte forma:
+
+    git log --grep="o que quer que esteja buscando, ex: bugfix"
+
+ Basicamente significa expressão regular global, é muito comum na programação, e vai ser usado para buscar na mensagem do commit o que quer que você esteja buscando.
+
+---
