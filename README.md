@@ -1,3 +1,3 @@
 # Discover
 
-Pequenas descobertas durante minha escalada de aprendizado!
+Pequenas descobertas durante minha escalada de aprendizagem!
